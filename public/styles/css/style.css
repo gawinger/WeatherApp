@@ -3,10 +3,19 @@ main {
   margin: auto;
   width: 80vw;
   min-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .row .card {
@@ -17,6 +26,8 @@ main {
 }
 
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   min-height: 55vh;
@@ -34,9 +45,16 @@ main {
   width: 48.75%;
   min-height: 100%;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .container .row {
@@ -51,7 +69,8 @@ main {
 .second-row {
   margin-top: 5%;
   height: 95%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .bottom-row {
@@ -66,20 +85,30 @@ main {
 
 .daily-card {
   padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 100%;
 }
 
 .daily-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-top: 8px;
 }
 
 .daily-head #wicon {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 40%;
 }
 
@@ -89,9 +118,15 @@ main {
 }
 
 .daily-head .daily-temp-night {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 22px;
 }
 
@@ -100,7 +135,8 @@ main {
 }
 
 .daily {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-right: 1px solid black;
   padding: 0 15px;
   width: 20%;
@@ -114,14 +150,22 @@ main {
 }
 
 .daily .daily-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin-top: 20px;
 }
 
 .daily .daily-details div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .daily .daily-details div img {
@@ -129,9 +173,16 @@ main {
 }
 
 .daily-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 50%;
 }
 
@@ -140,7 +191,8 @@ main {
 }
 
 .hourly {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0 2%;
   width: 33%;
   height: auto;
@@ -148,9 +200,15 @@ main {
 }
 
 .hourly-card {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   padding: 2% 0;
 }
 
@@ -177,9 +235,15 @@ main {
 
 .hourly-weather .hourly-prob {
   margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .hourly-weather .hourly-prob img {
@@ -191,11 +255,17 @@ main {
 }
 
 .air-card {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 3%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   background-color: #1e212b !important;
   color: #ebebeb;
 }
@@ -210,19 +280,34 @@ main {
 .air-card .air-container {
   width: 40%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .air-card .air-container .air-main {
   height: 100px;
   width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: center;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: 9px solid black;
   border-radius: 50%;
   font-size: 20px;
@@ -232,27 +317,47 @@ main {
 .air-card .components {
   width: 55%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .air-card .components div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0 10px;
 }
 
 .air-card .components div .component-title {
-  justify-content: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   width: 30% !important;
 }
 
 .air-card .components div .component-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: end;
-  justify-content: flex-end !important;
+  -webkit-box-pack: end !important;
+      -ms-flex-pack: end !important;
+          justify-content: flex-end !important;
   height: 100%;
 }
 
@@ -261,8 +366,11 @@ main {
 }
 
 .error-container {
-  justify-content: center;
-  box-sizing: border-box;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-bottom: 10% !important;
 }
 
@@ -298,7 +406,8 @@ main {
   border: none;
   font-family: "Poppins";
   font-size: 20px;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 body {
@@ -315,22 +424,38 @@ nav {
   padding: 0 10vw;
   background-color: #1e212b;
   margin-bottom: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 nav div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav .logo {
   color: #ebebeb;
   font-size: 30px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 nav .logo .author {
@@ -341,10 +466,20 @@ nav .logo .author {
   font-size: 18px;
 }
 
+nav .logo .author a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #f7f7f7;
+}
+
 nav .search {
   color: #ebebeb;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   width: 50%;
 }
 
@@ -352,13 +487,18 @@ nav .search form {
   margin-right: 10%;
   width: 70%;
   height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border: 1px solid #dbd9d9;
 }
 
 nav .search form input {
-  flex-grow: 2;
-  box-sizing: border-box;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 2px 10px;
   border: none;
   height: 100%;
@@ -378,19 +518,28 @@ nav .search form button {
   border: none;
   font-size: 16px;
   padding: 2px 20px;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .current {
   height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .current .current-header {
   width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 20px;
   padding-top: 10px;
 }
@@ -439,15 +588,27 @@ nav .search form button {
 
 .current .current-header-rest {
   width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .current .current-header-rest div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-right: 15px;
 }
 
@@ -456,8 +617,12 @@ nav .search form button {
 }
 
 .current .current-header-rest div .sun-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .current-details,
@@ -469,14 +634,19 @@ nav .search form button {
   height: 50%;
   width: 100%;
   background-color: #586674;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
 .current-details .col {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 100%;
   width: 50%;
   padding: 2% 2.5% 5% 2.5%;
@@ -488,8 +658,12 @@ nav .search form button {
 
 .current-details .col div {
   padding: 0 2.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 25%;
   width: 95%;
   color: #ebebeb;
@@ -506,16 +680,23 @@ nav .search form button {
 }
 
 .current-details .col div .detail-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   text-align: end;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 40%;
   height: 100%;
 }
 
 .filter {
-  filter: invert(1) sepia(1) saturate(1) hue-rotate(347deg) !important;
+  -webkit-filter: invert(1) sepia(1) saturate(1) hue-rotate(347deg) !important;
+          filter: invert(1) sepia(1) saturate(1) hue-rotate(347deg) !important;
 }
 
 @media (min-width: 2300px) {
@@ -607,12 +788,21 @@ nav .search form button {
   .daily-details {
     width: 100%;
     margin-top: 10px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .daily-details div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .daily-details img {
     width: 17px;
@@ -649,7 +839,10 @@ nav .search form button {
     width: 60% !important;
   }
   .container {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: auto;
   }
   .container .big-card {
@@ -693,17 +886,27 @@ nav .search form button {
   nav {
     height: 130px;
     width: 100%;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   nav .logo {
     padding-top: 7px;
-    align-items: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     height: 40%;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   nav .logo .author {
     margin-top: 0;
-    align-items: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     padding-left: 5px;
   }
   nav .search {
@@ -720,7 +923,10 @@ nav .search form button {
     font-size: 17px;
   }
   .daily-card {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin: 0;
     padding: 0 5%;
   }
@@ -729,6 +935,8 @@ nav .search form button {
     border-bottom: 1px solid #1e212b;
     width: 100%;
     height: 110px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 2% 0;
   }
@@ -739,7 +947,9 @@ nav .search form button {
   }
   .daily-card .daily .daily-head {
     width: 40%;
-    justify-content: unset;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
   }
   .daily-card .daily .daily-head #wicon {
     width: 40%;
@@ -748,13 +958,20 @@ nav .search form button {
     width: 60%;
   }
   .daily-card .daily .daily-details {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     width: 40% !important;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .daily-card .daily .daily-details div {
     width: 50%;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .daily-card .daily:nth-of-type(5) {
     border-bottom: none !important;
@@ -791,8 +1008,13 @@ nav .search form button {
 
 @media (max-width: 476px) {
   nav .logo {
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   nav .logo .logo-text {
     font-size: 22px;
@@ -804,7 +1026,10 @@ nav .search form button {
   .current {
     height: auto !important;
     padding-bottom: 15px;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .current .current-header {
     padding-bottom: 2%;
@@ -833,21 +1058,29 @@ nav .search form button {
   }
   .current .current-header-rest .wicon {
     padding: 0;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .current .current-header-rest .sun-track {
     margin-top: -10px;
     padding: 0;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .current .current-header-rest #main-img {
     margin-top: -20px;
     margin-left: 20px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     padding: 0;
   }
   .current-details {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: auto !important;
     padding: 5% 0;
   }

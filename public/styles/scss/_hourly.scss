@@ -1,0 +1,46 @@
+.hourly {
+  box-sizing: border-box;
+  padding: 0 2%;
+  width: 33%;
+  height: auto;
+  border-right: 1px solid black;
+}
+
+.hourly-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  padding: 2% 0;
+}
+
+.hourly-title {
+  font-size: 25px;
+  height: 20%;
+}
+
+.hourly-weather {
+  height: 80%;
+  #wicon {
+    height: 60%;
+    margin-top: -20px;
+  }
+  text-align: center;
+  .hourly-temp {
+    height: 30%;
+    margin-top: -30px;
+    font-size: 35px;
+  }
+  .hourly-prob {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      padding-right: 10px;
+    }
+  }
+}
+
+.hourly:nth-of-type(3) {
+  border: none;
+}

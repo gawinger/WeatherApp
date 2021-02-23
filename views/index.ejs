@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="../public/styles/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo"><span class="logo-text">WeatherApp </span><span class="author">by Bartosz Czupryna</span></div>
+      <div class="search">
+        <form action="/" method="GET">
+          <label for="getWeather" style="display: none">Weather</label>
+          <input type="text" id="getWeather" autocomplete="off" name="getWeather" placeholder="Search for a place" />
+          <button><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <div class="big-card">
+          <div class="current">
+            <div class="current-header">
+              <p class="location"><span class="weather-for">Weather for </span><span class="place"><%= name %></span></p>
+              <p class="location-details"><span><%= region %>,</span> <%= country %></p>
+              <p class="time"><%= currentTime.day %> <%= currentTime.hour %>:<%= currentTime.minutes %></p>
+              <div class="temperature"><%= Math.round(current.temp) %>&deg;C</div>
+              <div class="sensed">Fells like <%= Math.round(current.feels_like) %>&deg;C</div>
+            </div>
+            <div class="current-header-rest">
+              <div class="wicon"><img id="main-img" style="height: 18vh" src="../public/weatherIcons/<%= imgURL %> " alt="Weather icon" /></div>
+              <div class="sun-track">
+                <div><img src="../public/images/sunrise.svg" alt="Sunrise" /><%= current.sunrise %></div>
+                <div><img src="../public/images/sunset.svg" alt="Sunset" /><%= current.sunset %></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="current-details">
+            <div class="col">
+              <div class="detail-container">
+                <div class="detail-title"><img src="../public/images/cloud.svg" alt="Cloud" /> Cloudy:</div>
+                <div class="detail-value"><%= current.clouds %> %</div>
+              </div>
+              <div class="detail-container">
+                <div class="detail-title"><img src="../public/images/wind.svg" alt="Wind" />Wind speed:</div>
+                <div class="detail-value"><%= current.wind_speed %> m/s</div>
+              </div>
+              <div class="detail-container">
+                <div class="detail-title"><img src="../public/images/cloud-rain.svg" alt="Probability" />Rainfall:</div>
+                <div class="detail-value"><%= Math.round(hourly[0].pop*100) %> %</div>
+              </div>
+              <div class="detail-container">
+                <div class="detail-title"><img src="../public/images/arrow-down.svg" alt="Pressure" />Pressure:</div>
+                <div class="detail-value"><%= current.pressure %> hPa</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="detail-container">
+                <div class="detail-title"><img src="../public/images/droplet.svg" alt="Droplet" />Humidity:</div>
+                <div class="detail-value"><%= current.humidity %> %</div>
+              </div>
+              <div class="detail-container">
+                <div class="detail-title"><img src="../public/images/eye.svg" alt="Eye" />Visibility:</div>
+                <div class="detail-value"><%= current.visibility/1000 %> km</div>
+              </div>
+              <div class="detail-container">
+                <div class="detail-title"><img src="../public/images/sun.svg" alt="Sun" />UV Index:</div>
+                <div class="detail-value"><%= current.uvi %>/10</div>
+              </div>
+              <div class="detail-container">
+                <div class="detail-title"><img src="../public/images/thermometer.svg" alt="Thermometer" />Dew Point:</div>
+                <div class="detail-value"><%= Math.round(current.dew_point) %>&deg;C</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row-container">
+          <div class="row">
+            <div class="card hourly-card">
+              <% for(let i=1; i<=3; i++){ %>
+              <div class="hourly">
+                <div class="hourly-title"><%= getNextHours(currentTime.hour, i)%></div>
+                <div class="hourly-weather">
+                  <img id="wicon" src="http://openweathermap.org/img/wn/<%= hourly[i].weather[0].icon %>@2x.png" alt="Weather icon" />
+                  <div class="hourly-temp"><%= Math.round(hourly[i].temp) %>&deg;C</div>
+                  <div class="hourly-prob"><img src="../public/images/cloud-rain.svg" alt="Probability" /><%= Math.round(daily[i].pop*100) %> %</div>
+                </div>
+              </div>
+              <% } %>
+            </div>
+          </div>
+          <div class="row second-row">
+            <div class="card air-card">
+              <div class="air-container">
+                <div class="air-title">Air Quality</div>
+                <div class="air-main"><%= airQuality.list[0].main.aqi %></div>
+              </div>
+              <div class="components">
+                <div class="component-container">
+                  <div class="component-title">PM<sub>2.5</sub></div>
+                  <div class="component-value"><%= airQuality.list[0].components.pm2_5 %> μg/m3</div>
+                </div>
+                <div class="component-container">
+                  <div class="component-title">PM<sub>10</sub></div>
+                  <div class="component-value"><%= airQuality.list[0].components.pm10 %> μg/m3</div>
+                </div>
+                <div class="component-container">
+                  <div class="component-title">CO</div>
+                  <div class="component-value"><%= airQuality.list[0].components.co %> μg/m3</div>
+                </div>
+                <div class="component-container">
+                  <div class="component-title">NO</div>
+                  <div class="component-value"><%= airQuality.list[0].components.no %> μg/m3</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row bottom-row">
+        <div class="card daily-card">
+          <% for(let i=1; i<=5; i++){ %>
+          <div class="daily">
+            <div class="daily-title"><%= getNextDays(currentTime.day, i)%></div>
+            <div class="daily-head">
+              <img id="wicon" src="http://openweathermap.org/img/wn/<%= daily[i].weather[0].icon %>@2x.png" alt="Weather icon" />
+              <div class="daily-container">
+                <div class="daily-temp"><%= Math.round(daily[i].temp.day) %>&deg;C</div>
+                <div class="daily-temp-night"><img src="../public/images/moon.svg" alt="Moon" /><%= Math.round(daily[i].temp.night) %>&deg;C</div>
+              </div>
+            </div>
+            <div class="daily-details">
+              <div><img src="../public/images/cloud-rain.svg" alt="Probability" /><%= Math.round(daily[i].pop*100) %> %</div>
+              <div><img src="../public/images/cloud.svg" alt="Cloud" /><%= daily[i].clouds %> %</div>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </main>
+    <script src="../public/scripts/airQuality.js"></script>
+  </body>
+</html>

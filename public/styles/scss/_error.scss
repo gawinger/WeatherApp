@@ -1,0 +1,35 @@
+.error-container {
+  justify-content: center;
+  box-sizing: border-box;
+  padding-bottom: 10% !important;
+  .error-message {
+    background-color: #cad1ce;
+    text-align: center;
+    color: $tertiary-color;
+    border: 1px solid $tertiary-color;
+    padding: 6%;
+    .error-header {
+      font-size: 30px;
+      padding-bottom: 5px;
+    }
+    .error-title {
+      font-size: 25px;
+      font-weight: bold;
+      padding-bottom: 5px;
+    }
+    .error-description {
+      font-size: 20px;
+    }
+    .try-again {
+      padding: 5px 10px;
+      margin-top: 10px;
+      width: 130px;
+      background-color: $tertiary-color;
+      color: $light-text;
+      border: none;
+      font-family: "Poppins";
+      font-size: 20px;
+      box-shadow: none;
+    }
+  }
+}

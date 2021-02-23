@@ -1,0 +1,18 @@
+$primary-color: #dee3e0;
+$secondary-color: #91bbbb;
+$tertiary-color: #1e212b;
+$details-color: #586674;
+$light-text: #ebebeb;
+$dark-text: #1e212b;
+
+@function text-color($color) {
+  @if (lightness($color) > 50%) {
+    @return $dark-text;
+  } @else {
+    @return $light-text;
+  }
+}
+
+@mixin set-text-color($color) {
+  color: text-color($color);
+}

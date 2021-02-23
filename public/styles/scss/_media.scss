@@ -1,0 +1,395 @@
+@media (min-width: 2300px) {
+  body {
+    font-size: 35px !important;
+  }
+  .current-details,
+  .components {
+    font-size: 30px;
+  }
+  .hourly-temp,
+  .daily-temp {
+    font-size: 60px !important;
+  }
+  .daily-temp-night {
+    font-size: 30px !important;
+  }
+  .hourly-title,
+  .daily-title {
+    font-size: 45px !important;
+  }
+  .location {
+    .weather-for {
+      font-size: 45px !important;
+    }
+    .place {
+      font-size: 55px !important;
+    }
+  }
+  .time {
+    font-size: 40px !important;
+  }
+  .sensed {
+    font-size: 45px !important;
+  }
+  .temperature {
+    font-size: 100px !important;
+  }
+  .current-header {
+    padding-left: 50px !important;
+  }
+  .error-container {
+    .error-message {
+      .error-header {
+        font-size: 50px;
+      }
+      .error-title {
+        font-size: 40px;
+      }
+      .error-description {
+        font-size: 40px;
+      }
+      .try-again {
+        width: 250px;
+        font-size: 40px;
+      }
+    }
+  }
+  .air-title {
+    font-size: 50px !important;
+  }
+  .air-main {
+    width: 200px !important;
+    height: 200px !important;
+    font-size: 40px !important;
+    border-width: 10px !important;
+  }
+}
+
+@media (max-width: 1366px) {
+  .search form {
+    margin-right: 10% !important;
+    width: 83% !important;
+  }
+  .current-details,
+  .components {
+    font-size: 17px;
+  }
+
+  .detail-container {
+    padding: 0% !important;
+    .detail-title {
+      padding: 0 !important;
+    }
+  }
+
+  .current-details,
+  .components {
+    font-size: 17px;
+  }
+
+  .daily {
+    padding: 1%;
+  }
+  .col:nth-of-type(1) {
+    padding-right: 0;
+  }
+
+  .daily-details {
+    width: 100%;
+    margin-top: 10px !important;
+    display: flex;
+    flex-direction: column;
+    div {
+      display: flex;
+      justify-content: center;
+    }
+    img {
+      width: 17px;
+      padding-right: 2px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  html,
+  body {
+    overflow: auto;
+    min-height: 100%;
+  }
+
+  main {
+    width: 90%;
+    height: auto;
+    margin: 0 5%;
+    margin-bottom: 5vh;
+  }
+  nav {
+    padding: 0 5vw;
+    .logo {
+      padding-left: 2vw;
+      .logo-text {
+        font-size: 25px;
+      }
+      .author {
+        font-size: 15px;
+        padding-left: 30px;
+      }
+    }
+    .search {
+      width: 60% !important;
+    }
+  }
+  .container {
+    flex-direction: column;
+    height: auto;
+    .big-card {
+      width: 100%;
+      .current {
+        min-height: 25vh;
+      }
+      .current-details {
+        min-height: 30vh;
+        .col {
+          height: auto;
+        }
+      }
+    }
+  }
+  .row-container {
+    width: 100% !important;
+    margin: 5vh 0;
+    .row {
+      height: auto;
+    }
+  }
+
+  .daily {
+    .daily-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .daily-head {
+      .daily-temp {
+        font-size: 30px;
+      }
+      .daily-temp-night {
+        font-size: 16px;
+      }
+    }
+  }
+  .bottom-row {
+    margin-top: 0;
+  }
+  .air-card {
+    height: 210px;
+  }
+}
+
+@media (max-width: 568px) {
+  nav {
+    height: 130px;
+    width: 100%;
+    flex-direction: column;
+    .logo {
+      padding-top: 7px;
+      align-items: flex-end;
+      height: 40%;
+      flex-direction: row;
+      .author {
+        margin-top: 0;
+        align-items: flex-end;
+        padding-left: 5px;
+      }
+    }
+    .search {
+      margin-top: -10px;
+      height: 60%;
+      width: 100% !important;
+      form {
+        width: 100% !important;
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  .current-details,
+  .components {
+    font-size: 17px;
+  }
+
+  .daily-card {
+    flex-direction: column;
+    margin: 0;
+    padding: 0 5%;
+    .daily {
+      border: none;
+      border-bottom: 1px solid $dark-text;
+      width: 100%;
+      height: 110px;
+      display: flex;
+      padding: 2% 0;
+
+      .daily-title {
+        text-align: start;
+        width: 20%;
+        margin-top: 3px;
+      }
+      .daily-head {
+        width: 40%;
+        justify-content: unset;
+        #wicon {
+          width: 40%;
+        }
+        .daily-container {
+          width: 60%;
+        }
+      }
+      .daily-details {
+        flex-direction: row;
+        width: 40% !important;
+        justify-content: space-between;
+        div {
+          width: 50%;
+          justify-content: center;
+        }
+      }
+    }
+    .daily:nth-of-type(5) {
+      border-bottom: none !important;
+    }
+  }
+  .error-header {
+    font-size: 25px !important;
+  }
+  .error-title {
+    font-size: 20px !important;
+    font-weight: bold;
+  }
+  .error-description {
+    font-size: 16px !important;
+  }
+
+  .air-title {
+    font-size: 20px !important;
+    margin-bottom: 5% !important;
+  }
+
+  .air-main {
+    margin-bottom: 20%;
+    margin-left: 5%;
+  }
+
+  .components {
+    font-size: 12px !important;
+    padding: 0 5% !important;
+    .component-container {
+      padding: 0 !important;
+      .component-value {
+        padding: 0 !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 476px) {
+  nav {
+    .logo {
+      flex-direction: column;
+      align-items: flex-start;
+      .logo-text {
+        font-size: 22px;
+      }
+      .author {
+        margin-top: -10px;
+        padding-left: 30px;
+      }
+    }
+  }
+  .current {
+    height: auto !important;
+    padding-bottom: 15px;
+    flex-direction: column;
+    .current-header {
+      padding-bottom: 2%;
+      width: 100%;
+      .location {
+        font-size: 15px;
+      }
+      .place {
+        font-size: 25px;
+      }
+      .time {
+        margin-top: -15px !important;
+        color: rgb(114, 114, 114);
+      }
+      .temperature {
+        font-size: 40px;
+        margin-top: -15px;
+        text-align: end;
+      }
+      .sensed {
+        text-align: end;
+      }
+    }
+    .current-header-rest {
+      width: 100%;
+      .wicon {
+        padding: 0;
+        justify-content: flex-start;
+      }
+      .sun-track {
+        margin-top: -10px;
+        padding: 0;
+        justify-content: flex-end;
+      }
+
+      #main-img {
+        margin-top: -20px;
+        margin-left: 20px;
+        object-fit: cover;
+        padding: 0;
+      }
+    }
+  }
+
+  .current-details {
+    flex-direction: column;
+    height: auto !important;
+    padding: 5% 0;
+    .col {
+      width: 100%;
+      padding: 0 5%;
+      .detail-container {
+        height: 50px;
+      }
+    }
+  }
+
+  .current-details,
+  .components {
+    font-size: 17px;
+  }
+
+  .container {
+    .row-container {
+      height: auto !important;
+      .row {
+        height: auto !important;
+      }
+    }
+    .hourly-card {
+      height: auto !important;
+    }
+  }
+
+  .error-header {
+    font-size: 20px !important;
+  }
+  .error-title {
+    font-size: 20px !important;
+    font-weight: bold;
+  }
+  .error-description {
+    font-size: 15px !important;
+  }
+}

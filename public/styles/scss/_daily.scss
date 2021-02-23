@@ -1,0 +1,66 @@
+.daily-card {
+  padding: 15px 0;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.daily-head {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 8px;
+  #wicon {
+    object-fit: cover;
+    width: 40%;
+  }
+  .daily-temp {
+    font-size: 40px;
+    text-align: center;
+  }
+  .daily-temp-night {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    img {
+      padding-right: 5px;
+    }
+  }
+}
+
+.daily {
+  box-sizing: border-box;
+  border-right: 1px solid black;
+  padding: 0 15px;
+  width: 20%;
+  height: 100%;
+  .daily-title {
+    margin-top: -10px;
+    font-size: 23px;
+    text-align: center;
+  }
+  .daily-details {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    div {
+      display: flex;
+      align-items: center;
+      img {
+        padding-right: 7px;
+      }
+    }
+  }
+}
+
+.daily-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.daily:nth-of-type(5) {
+  border: none;
+}

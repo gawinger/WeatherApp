@@ -1,0 +1,62 @@
+@import "config";
+
+main {
+  margin: auto;
+  width: 80vw;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row {
+  .card {
+    background-color: $secondary-color;
+    width: 50%;
+    min-height: 100%;
+    border-radius: 5px;
+  }
+}
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 55vh;
+  .big-card {
+    width: 48.75%;
+    margin-right: 2.5%;
+    min-height: 50vh;
+    background-color: $secondary-color;
+    border-radius: 5px;
+  }
+  .row-container {
+    width: 48.75%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .row {
+    width: 100%;
+    min-height: 47.5%;
+    .card {
+      width: 100%;
+    }
+  }
+}
+
+.second-row {
+  margin-top: 5%;
+  height: 95%;
+  box-sizing: border-box;
+}
+
+.bottom-row {
+  margin-top: 2.5%;
+  width: 100%;
+  min-height: 20vh;
+  .card {
+    width: 100%;
+  }
+}

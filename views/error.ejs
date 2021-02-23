@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="../public/styles/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo"><span class="logo-text">WeatherApp </span><span class="author">by Bartosz Czupryna</span></div>
+      <div class="search">
+        <form action="/" method="GET">
+          <label for="getWeather" style="display: none">Weather</label>
+          <input type="text" id="getWeather" autocomplete="off" name="getWeather" placeholder="Search for a place" />
+          <button><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </nav>
+    <main class="error-container">
+      <div class="error-message">
+        <div class="error-header">Something went wrong...</div>
+        <div class="error-title">Error <%= errorData.status %></div>
+        <div class="error-description"><%= errorData.text %></div>
+        <% if (errorData.text === "Bad Request") { %>
+        <button class="try-again">Try Again</button>
+        <% } %>
+      </div>
+    </main>
+    <script src="/public/scripts/pageReload.js"></script>
+  </body>
+</html>
